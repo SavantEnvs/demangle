@@ -1,0 +1,9 @@
+# origin: https://app.mayhem.security/mayhemheroes/demangle/fuzzrustdemangle/6
+project: savantenvs/demangle
+target: fuzzrustdemangle-buggy-mhh-run-6
+cmds:
+  - cmd: /mayhem/FuzzRustDemangle
+    libfuzzer: true
+    dictionary: /mayhem/mayhem/demangle.dict
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
